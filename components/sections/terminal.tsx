@@ -56,9 +56,9 @@ const commands: Record<string, string | string[]> = {
   contato: [
     ">> Formas de Contato:",
     "",
-    "   Email    : richardvictor.dev@gmail.com",
-    "   GitHub   : github.com/richardvictor-dev",
-    "   LinkedIn : linkedin.com/in/richardvictor-dev",
+    "   Email    : richardvic12@gmail.com",
+    "   GitHub   : github.com/rvalves10",
+    "   LinkedIn : linkedin.com/in/richard-victor-3611a5303",
     "",
     "   Digite 'github' ou 'linkedin' para abrir"
   ],
@@ -120,14 +120,14 @@ export function InteractiveTerminal() {
     }
 
     if (trimmedCmd === "github") {
-      window.open("https://github.com/richardvictor-dev", "_blank")
+      window.open("https://github.com/rvalves10", "_blank")
       newLines.push({ type: "output", content: "Abrindo GitHub..." })
       setLines(newLines)
       return
     }
 
     if (trimmedCmd === "linkedin") {
-      window.open("https://linkedin.com/in/richardvictor-dev", "_blank")
+      window.open("https://www.linkedin.com/in/richard-victor-3611a5303/", "_blank")
       newLines.push({ type: "output", content: "Abrindo LinkedIn..." })
       setLines(newLines)
       return

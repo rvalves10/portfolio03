@@ -4,20 +4,20 @@ import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react"
 const contacts = [
   {
     name: "Email",
-    value: "contato@richardvictor.dev",
-    href: "mailto:contato@richardvictor.dev",
+    value: "richardvic12@gmail.com",
+    href: "mailto:richardvic12@gmail.com",
     icon: Mail
   },
   {
     name: "GitHub",
-    value: "github.com/richardvictor",
-    href: "https://github.com/richardvictor",
+    value: "github.com/rvalves10",
+    href: "https://github.com/rvalves10",
     icon: Github
   },
   {
     name: "LinkedIn",
-    value: "linkedin.com/in/richardvictor",
-    href: "https://linkedin.com/in/richardvictor",
+    value: "linkedin.com/in/richard-victor",
+    href: "https://www.linkedin.com/in/richard-victor-3611a5303/",
     icon: Linkedin
   }
 ]
@@ -67,7 +67,7 @@ export function Contact() {
           
           <div className="pt-4">
             <Button size="lg" asChild>
-              <a href="mailto:contato@richardvictor.dev">
+              <a href="mailto:richardvic12@gmail.com">
                 <Mail className="mr-2 h-4 w-4" />
                 Enviar Email
               </a>
