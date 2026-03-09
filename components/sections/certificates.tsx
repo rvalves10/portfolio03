@@ -18,37 +18,227 @@ interface Certificate {
 }
 
 const certificates: Certificate[] = [
+  // Formacoes (Principais)
   {
     id: "1",
-    title: "Python Fundamentos",
-    issuer: "Curso em Video",
-    date: "2024",
-    skills: ["Python", "Logica", "Algoritmos"],
+    title: "Formacao: A partir do zero - Iniciante em Programacao",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Forma%C3%A7%C3%A3o%20A%20partir%20do%20zero_%20iniciante%20em%20programa%C3%A7%C3%A3o%20-%20Alura.png",
+    skills: ["Logica", "JavaScript", "Fundamentos"],
     category: "programming"
   },
   {
     id: "2",
-    title: "Git e GitHub",
-    issuer: "DIO",
-    date: "2024",
-    skills: ["Git", "GitHub", "Versionamento"],
+    title: "Formacao: Aprenda a programar em Python com OO",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Forma%C3%A7%C3%A3o%20Aprenda%20a%20programar%20em%20Python%20com%20Orienta%C3%A7%C3%A3o%20a%20Objetos%20-%20Alura.png",
+    skills: ["Python", "POO", "Classes"],
     category: "programming"
   },
   {
     id: "3",
-    title: "SQL Basico ao Avancado",
-    issuer: "Udemy",
-    date: "2024",
-    skills: ["SQL", "PostgreSQL", "Banco de Dados"],
+    title: "Formacao: Praticando Python",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Forma%C3%A7%C3%A3o%20Praticando%20Python%20-%20Alura.png",
+    skills: ["Python", "Projetos", "Pratica"],
+    category: "programming"
+  },
+  // Cursos Python
+  {
+    id: "4",
+    title: "Python: Crie a sua primeira aplicacao",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Python_%20crie%20a%20sua%20primeira%20aplica%C3%A7%C3%A3o%20-%20Alura.png",
+    skills: ["Python", "Fundamentos", "Aplicacoes"],
+    category: "programming"
+  },
+  {
+    id: "5",
+    title: "Python: Aplicando a Orientacao a Objetos",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Python_%20aplicando%20a%20Orienta%C3%A7%C3%A3o%20a%20Objetos%20-%20Alura.png",
+    skills: ["Python", "POO", "Classes"],
+    category: "programming"
+  },
+  {
+    id: "6",
+    title: "Python: Avance na OO e consuma API",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Python_%20avance%20na%20Orienta%C3%A7%C3%A3o%20a%20Objetos%20e%20consuma%20API%20-%20Alura.png",
+    skills: ["Python", "API", "POO Avancado"],
+    category: "programming"
+  },
+  {
+    id: "7",
+    title: "Python Collections parte 1: Listas e Tuplas",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Python%20Collections%20parte%201_%20listas%20e%20tuplas%20-%20Alura.png",
+    skills: ["Python", "Listas", "Tuplas"],
     category: "data"
   },
   {
-    id: "4",
-    title: "Introducao a Inteligencia Artificial",
-    issuer: "Microsoft Learn",
+    id: "8",
+    title: "Python Collections parte 2: Conjuntos e Dicionarios",
+    issuer: "Alura",
     date: "2025",
-    skills: ["IA", "Machine Learning", "Conceitos"],
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Python%20Collections%20parte%202_%20conjuntos%20e%20dicion%C3%A1rios%20-%20Alura.png",
+    skills: ["Python", "Dicionarios", "Sets"],
     category: "data"
+  },
+  // Praticando Python
+  {
+    id: "9",
+    title: "Praticando Python: Condicionais if, elif e else",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20Python_%20condicionais%20if,%20elif%20e%20else%20-%20Alura.png",
+    skills: ["Python", "Condicionais", "Logica"],
+    category: "programming"
+  },
+  {
+    id: "10",
+    title: "Praticando Python: Lacos for e while",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20Python_%20la%C3%A7os%20for%20e%20while%20-%20Alura.png",
+    skills: ["Python", "Loops", "Iteracao"],
+    category: "programming"
+  },
+  {
+    id: "11",
+    title: "Praticando Python: Funcoes",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20Python_%20fun%C3%A7%C3%B5es%20-%20Alura.png",
+    skills: ["Python", "Funcoes", "Modularizacao"],
+    category: "programming"
+  },
+  {
+    id: "12",
+    title: "Praticando Python: Listas e Tuplas",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20Python_%20listas%20e%20tuplas%20-%20Alura.png",
+    skills: ["Python", "Listas", "Tuplas"],
+    category: "data"
+  },
+  {
+    id: "13",
+    title: "Praticando Python: Conjuntos e Dicionarios",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20Python_%20conjuntos%20e%20dicion%C3%A1rios%20-%20Alura.png",
+    skills: ["Python", "Dicionarios", "Sets"],
+    category: "data"
+  },
+  {
+    id: "14",
+    title: "Praticando Python: Estruturas de Dados",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20Python_%20estruturas%20de%20dados%20-%20Alura.png",
+    skills: ["Python", "Estruturas", "Dados"],
+    category: "data"
+  },
+  {
+    id: "15",
+    title: "Praticando Python: Strings e Regex",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20Python_%20Strings%20e%20Regex%20-%20Alura.png",
+    skills: ["Python", "Strings", "Regex"],
+    category: "programming"
+  },
+  {
+    id: "16",
+    title: "Praticando Python: Programacao Assincrona",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20python_%20programa%C3%A7%C3%A3o%20ass%C3%ADncrona%20-%20Alura.png",
+    skills: ["Python", "Async", "Concorrencia"],
+    category: "programming"
+  },
+  {
+    id: "17",
+    title: "Praticando Python: Trabalhando com Projetos",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Praticando%20Python_%20trabalhando%20com%20projetos%20-%20Alura.png",
+    skills: ["Python", "Projetos", "Pratica"],
+    category: "programming"
+  },
+  // Logica de Programacao
+  {
+    id: "18",
+    title: "Logica de Programacao: Mergulhe com JavaScript",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20L%C3%B3gica%20de%20programa%C3%A7%C3%A3o_%20mergulhe%20em%20programa%C3%A7%C3%A3o%20com%20JavaScript%20-%20Alura.png",
+    skills: ["JavaScript", "Logica", "Fundamentos"],
+    category: "programming"
+  },
+  {
+    id: "19",
+    title: "Logica de Programacao: Explore Funcoes e Listas",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20L%C3%B3gica%20de%20programa%C3%A7%C3%A3o_%20explore%20fun%C3%A7%C3%B5es%20e%20listas%20-%20Alura.png",
+    skills: ["JavaScript", "Funcoes", "Arrays"],
+    category: "programming"
+  },
+  {
+    id: "20",
+    title: "Logica de Programacao: Praticando com Desafios",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20L%C3%B3gica%20de%20programa%C3%A7%C3%A3o_%20praticando%20com%20desafios%20-%20Alura.png",
+    skills: ["JavaScript", "Desafios", "Pratica"],
+    category: "programming"
+  },
+  // Outros
+  {
+    id: "21",
+    title: "Comecando em Programacao: Carreira e Primeiros Passos",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Come%C3%A7ando%20em%20Programa%C3%A7%C3%A3o_%20carreira%20e%20primeiros%20passos%20-%20Alura.png",
+    skills: ["Carreira", "Introducao", "Fundamentos"],
+    category: "soft-skills"
+  },
+  {
+    id: "22",
+    title: "Git e GitHub: Compartilhando e Colaborando em Projetos",
+    issuer: "Alura",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves%20-%20Curso%20Git%20e%20GitHub_%20compartilhando%20e%20colaborando%20em%20projetos%20-%20Alura.png",
+    skills: ["Git", "GitHub", "Versionamento"],
+    category: "programming"
+  },
+  // Certificados externos
+  {
+    id: "23",
+    title: "Certificado de Inteligencia Artificial",
+    issuer: "Externo",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves.pdf%20IA.png",
+    skills: ["IA", "Machine Learning", "Fundamentos"],
+    category: "data"
+  },
+  {
+    id: "24",
+    title: "Certificado de Conclusao",
+    issuer: "Externo",
+    date: "2025",
+    credentialUrl: "https://github.com/rvalves10/certificados/blob/main/Richard%20Victor%20De%20Almeida%20Alves.png",
+    skills: ["Programacao", "Desenvolvimento"],
+    category: "other"
   }
 ]
 
@@ -91,7 +281,7 @@ export function Certificates() {
         </div>
 
         <p className="text-muted-foreground mb-8 max-w-2xl">
-          Certificacoes e cursos que completei durante minha jornada de aprendizado 
+          Certificacoes e cursos que completei durante minha jornada de aprendizado
           em desenvolvimento e tecnologia.
         </p>
 
@@ -211,14 +401,18 @@ export function Certificates() {
           </div>
         )}
 
-        {/* Add Certificate Note */}
-        <div className="mt-12 p-6 rounded-lg border border-dashed border-border bg-secondary/20">
+        {/* GitHub Repository Link */}
+        <div className="mt-12 p-6 rounded-lg border border-border bg-secondary/20">
           <p className="text-sm text-muted-foreground text-center">
-            Voce pode editar o arquivo{" "}
-            <code className="px-2 py-1 bg-secondary rounded text-primary font-mono text-xs">
-              components/sections/certificates.tsx
-            </code>{" "}
-            para adicionar seus proprios certificados.
+            Todos os certificados estao disponiveis no{" "}
+            <a 
+              href="https://github.com/rvalves10/certificados" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              repositorio do GitHub
+            </a>
           </p>
         </div>
       </div>
