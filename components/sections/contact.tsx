@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button"
 import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react"
 
 const contacts = [
@@ -65,12 +66,12 @@ export function Contact() {
           </div>
           
           <div className="pt-4">
-            <a href="mailto:richardvic12@gmail.com">
-              <Button size="lg">
+            <Button size="lg" asChild>
+              <a href="mailto:richardvic12@gmail.com">
                 <Mail className="mr-2 h-4 w-4" />
                 Enviar Email
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </div>
       </div>
