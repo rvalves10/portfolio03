@@ -66,12 +66,12 @@ export function Contact() {
           </div>
           
           <div className="pt-4">
-            <Button size="lg" asChild>
-              <a href="mailto:richardvic12@gmail.com">
+            <a href="mailto:richardvic12@gmail.com">
+              <Button size="lg">
                 <Mail className="mr-2 h-4 w-4" />
                 Enviar Email
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
         </div>
       </div>
