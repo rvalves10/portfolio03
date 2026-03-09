@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react"
 
 const contacts = [
