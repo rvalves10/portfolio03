@@ -3,7 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { TiltCard } from "@/components/ui/tilt-card"
-import { ArrowUpRight, MapPin, Leaf, MessageCircle } from "lucide-react"
+import { ArrowUpRight, Github, Leaf, MessageCircle } from "lucide-react"
 
 const projects = [
   {
@@ -11,7 +11,7 @@ const projects = [
     description: "Portal colaborativo criado para moradores de Sorocaba compartilharem dicas úteis da cidade, como serviços, oportunidades, lugares e informações importantes da comunidade.",
     status: "Em desenvolvimento",
     featured: true,
-    icon: MapPin
+    icon: Github
   },
   {
     title: "Sistema EcoFood",
@@ -39,12 +39,12 @@ export function Projects() {
             Projetos
           </h2>
         </div>
-        
+
         <div className="space-y-6">
           {/* Featured Project */}
           {projects.filter(p => p.featured).map((project) => (
             <TiltCard key={project.title} tiltMaxAngle={8} scale={1.01}>
-              <Card 
+              <Card
                 className="group relative overflow-hidden border-primary/30 bg-gradient-to-br from-card to-primary/5 hover:border-primary/60 transition-all duration-300"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
@@ -76,12 +76,12 @@ export function Projects() {
               </Card>
             </TiltCard>
           ))}
-          
+
           {/* Other Projects */}
           <div className="grid md:grid-cols-2 gap-6">
             {projects.filter(p => !p.featured).map((project) => (
               <TiltCard key={project.title} tiltMaxAngle={12} scale={1.03}>
-                <Card 
+                <Card
                   className="group border-border hover:border-primary/50 transition-all duration-300 h-full"
                 >
                   <CardHeader>
