@@ -11,7 +11,8 @@ const projects = [
     description: "Portal colaborativo criado para moradores de Sorocaba compartilharem dicas úteis da cidade, como serviços, oportunidades, lugares e informações importantes da comunidade.",
     status: "Em desenvolvimento",
     featured: true,
-    icon: MapPin
+    icon: MapPin,
+    href: "https://github.com/rvalves10/Quebra-Dica-Sorocaba"
   },
   {
     title: "Sistema EcoFood",
@@ -33,80 +34,131 @@ export function Projects() {
   return (
     <section id="projetos" className="py-24 px-6 lg:px-12">
       <div className="max-w-4xl">
+
         <div className="flex items-center gap-3 mb-12">
           <div className="h-px flex-1 max-w-12 bg-primary" />
           <h2 className="text-sm font-medium uppercase tracking-widest text-primary">
             Projetos
           </h2>
         </div>
-        
+
         <div className="space-y-6">
+
           {/* Featured Project */}
           {projects.filter(p => p.featured).map((project) => (
             <TiltCard key={project.title} tiltMaxAngle={8} scale={1.01}>
-              <Card 
-                className="group relative overflow-hidden border-primary/30 bg-gradient-to-br from-card to-primary/5 hover:border-primary/60 transition-all duration-300"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-                <CardHeader className="relative">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <div className="p-3 rounded-lg bg-primary/20 text-primary">
-                        <project.icon className="h-6 w-6" />
+
+              <a href={project.href} target="_blank" rel="noopener noreferrer">
+
+                <Card
+                  className="group relative overflow-hidden border-primary/30 bg-gradient-to-br from-card to-primary/5 hover:border-primary/60 transition-all duration-300 cursor-pointer"
+                >
+
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+
+                  <CardHeader className="relative">
+                    <div className="flex items-start justify-between gap-4">
+
+                      <div className="flex items-center gap-3">
+
+                        <div className="p-3 rounded-lg bg-primary/20 text-primary">
+                          <project.icon className="h-6 w-6" />
+                        </div>
+
+                        <div>
+                          <Badge
+                            variant="secondary"
+                            className="mb-2 bg-primary/20 text-primary border-0"
+                          >
+                            Projeto Principal
+                          </Badge>
+
+                          <CardTitle className="text-2xl text-foreground">
+                            {project.title}
+                          </CardTitle>
+                        </div>
+
                       </div>
-                      <div>
-                        <Badge variant="secondary" className="mb-2 bg-primary/20 text-primary border-0">
-                          Projeto Principal
-                        </Badge>
-                        <CardTitle className="text-2xl text-foreground">{project.title}</CardTitle>
-                      </div>
+
+                      <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+
                     </div>
-                    <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                  </div>
-                </CardHeader>
-                <CardContent className="relative">
-                  <CardDescription className="text-base leading-relaxed mb-4">
-                    {project.description}
-                  </CardDescription>
-                  <Badge variant="outline" className="text-xs">
-                    <span className="w-2 h-2 rounded-full bg-yellow-500 mr-2" />
-                    {project.status}
-                  </Badge>
-                </CardContent>
-              </Card>
+                  </CardHeader>
+
+                  <CardContent className="relative">
+
+                    <CardDescription className="text-base leading-relaxed mb-4">
+                      {project.description}
+                    </CardDescription>
+
+                    <div className="flex items-center gap-3 flex-wrap">
+
+                      <Badge variant="outline" className="text-xs">
+                        <span className="w-2 h-2 rounded-full bg-yellow-500 mr-2" />
+                        {project.status}
+                      </Badge>
+
+                    </div>
+
+                  </CardContent>
+
+                </Card>
+
+              </a>
+
             </TiltCard>
           ))}
-          
+
           {/* Other Projects */}
           <div className="grid md:grid-cols-2 gap-6">
+
             {projects.filter(p => !p.featured).map((project) => (
               <TiltCard key={project.title} tiltMaxAngle={12} scale={1.03}>
-                <Card 
+
+                <Card
                   className="group border-border hover:border-primary/50 transition-all duration-300 h-full"
                 >
+
                   <CardHeader>
+
                     <div className="flex items-start justify-between gap-4">
+
                       <div className="p-3 rounded-lg bg-secondary text-primary">
                         <project.icon className="h-5 w-5" />
                       </div>
+
                       <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+
                     </div>
-                    <CardTitle className="text-lg text-foreground">{project.title}</CardTitle>
+
+                    <CardTitle className="text-lg text-foreground">
+                      {project.title}
+                    </CardTitle>
+
                   </CardHeader>
+
                   <CardContent>
+
                     <CardDescription className="text-sm leading-relaxed mb-4">
                       {project.description}
                     </CardDescription>
+
                     <Badge variant="outline" className="text-xs">
                       <span className="w-2 h-2 rounded-full bg-yellow-500 mr-2" />
                       {project.status}
                     </Badge>
+
                   </CardContent>
+
                 </Card>
+
               </TiltCard>
             ))}
+
           </div>
+
         </div>
+
       </div>
     </section>
   )
