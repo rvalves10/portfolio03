@@ -45,7 +45,7 @@ export function Projects() {
           {projects.filter(p => p.featured).map((project) => (
             <TiltCard key={project.title} tiltMaxAngle={8} scale={1.01}>
               <Card
-                className="group relative overflow-hidden border-primary/30 bg-gradient-to-br from-card to-primary/5 hover:border-primary/60 transition-all duration-300"
+                className="group relative overflow-hidden border-primary/30 bg-linear-to-br from-card to-primary/5 hover:border-primary/60 transition-all duration-300"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
                 <CardHeader className="relative">
