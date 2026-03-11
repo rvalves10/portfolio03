@@ -11,6 +11,7 @@ const projects = [
     description: "Portal colaborativo criado para moradores de Sorocaba compartilharem dicas úteis da cidade, como serviços, oportunidades, lugares e informações importantes da comunidade.",
     status: "Em desenvolvimento",
     featured: true,
+    href: 'https://rvalves10.github.io/Quebra-Dica-Sorocaba/',
     icon: Github
   },
   {
