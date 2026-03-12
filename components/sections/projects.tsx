@@ -11,21 +11,27 @@ const projects = [
     description: "Portal colaborativo criado para moradores de Sorocaba compartilharem dicas úteis da cidade, como serviços, oportunidades, lugares e informações importantes da comunidade.",
     status: "Em desenvolvimento",
     featured: true,
-    icon: MapPin
+    icon: MapPin,
+    liveUrl: "https://rvalves10.github.io/Quebra-Dica-Sorocaba/",
+    sourceUrl: "https://github.com/rvalves10/Quebra-Dica-Sorocaba"
   },
   {
     title: "Sistema EcoFood",
     description: "Plataforma para combater o desperdício de alimentos conectando mercados, padarias e restaurantes com pessoas ou instituições que possam aproveitar alimentos próximos da validade.",
     status: "Em desenvolvimento",
     featured: false,
-    icon: Leaf
+    icon: Leaf,
+    liveUrl: "https://example.com/ecofood",
+    sourceUrl: "https://github.com/seu-usuario/ecofood"
   },
   {
     title: "Chatbot de Educação Financeira",
     description: "Projeto de chatbot voltado para ensinar educação financeira para jovens e adultos.",
     status: "Em desenvolvimento",
     featured: false,
-    icon: MessageCircle
+    icon: MessageCircle,
+    liveUrl: "https://example.com/chatbot-financas",
+    sourceUrl: "https://github.com/seu-usuario/chatbot-financeiro"
   }
 ]
 
@@ -72,6 +78,29 @@ export function Projects() {
                     <span className="w-2 h-2 rounded-full bg-yellow-500 mr-2" />
                     {project.status}
                   </Badge>
+
+                  <div className="mt-4 flex gap-2 flex-wrap">
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-medium text-primary hover:underline"
+                      >
+                        Ver projeto
+                      </a>
+                    )}
+                    {project.sourceUrl && (
+                      <a
+                        href={project.sourceUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-medium text-primary hover:underline"
+                      >
+                        Código fonte
+                      </a>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             </TiltCard>
@@ -101,6 +130,29 @@ export function Projects() {
                       <span className="w-2 h-2 rounded-full bg-yellow-500 mr-2" />
                       {project.status}
                     </Badge>
+
+                    <div className="mt-3 flex gap-2 flex-wrap">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-xs font-medium text-primary hover:underline"
+                        >
+                          Ver projeto
+                        </a>
+                      )}
+                      {project.sourceUrl && (
+                        <a
+                          href={project.sourceUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-xs font-medium text-primary hover:underline"
+                        >
+                          Código fonte
+                        </a>
+                      )}
+                    </div>
                   </CardContent>
                 </Card>
               </TiltCard>

@@ -226,15 +226,14 @@ export function InteractiveTerminal() {
             <div className="flex items-center text-primary">
               <span className="mr-2">$</span>
               <input
-                ref={inputRef}
-                type="text"
-                value={currentInput}
-                onChange={(e) => setCurrentInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                className="flex-1 bg-transparent outline-none text-foreground caret-primary"
-                autoFocus
-                spellCheck={false}
-              />
+                  ref={inputRef}
+                  type="text"
+                  value={currentInput}
+                  onChange={(e) => setCurrentInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  className="flex-1 bg-transparent outline-none text-foreground caret-primary"
+                  spellCheck={false}
+                />
             </div>
           </div>
         </Card>

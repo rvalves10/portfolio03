@@ -8,8 +8,7 @@ const roles = [
   "Desenvolvedor Backend",
   "Especialista Python",
   "Futuro Eng. de IA",
-  "Criador de APIs",
-  "Problem Solver"
+  "Criador de APIs"
 ]
 
 export function Hero() {

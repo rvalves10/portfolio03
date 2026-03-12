@@ -30,14 +30,14 @@ const timelineItems = [
   {
     year: "2025",
     title: "Foco em Backend",
-    description: "Decidi me especializar em desenvolvimento backend com Python, estudando FastAPI, Django e arquitetura de APIs.",
+    description: "Decidi me especializar em desenvolvimento backend com Python",
     icon: Target,
     color: "bg-green-500"
   },
   {
     year: "Futuro",
     title: "Engenharia de IA",
-    description: "Objetivo de me tornar engenheiro de inteligencia artificial, unindo backend com machine learning.",
+    description: "Objetivo de me tornar engenheiro de inteligencia artificial",
     icon: Rocket,
     color: "bg-primary"
   }
