@@ -9,7 +9,7 @@ const projects = [
   {
     title: "QuebraDica Sorocaba",
     description: "Portal colaborativo criado para moradores de Sorocaba compartilharem dicas úteis da cidade, como serviços, oportunidades, lugares e informações importantes da comunidade.",
-    status: "Em desenvolvimento",
+    status: "Online",
     featured: true,
     icon: MapPin,
     liveUrl: "https://rvalves10.github.io/Quebra-Dica-Sorocaba/",
@@ -21,8 +21,8 @@ const projects = [
     status: "Em desenvolvimento",
     featured: false,
     icon: Leaf,
-    liveUrl: "https://example.com/ecofood",
-    sourceUrl: "https://github.com/seu-usuario/ecofood"
+    //liveUrl: "https://example.com/ecofood",
+    //sourceUrl: "https://github.com/seu-usuario/ecofood"
   },
   {
     title: "Chatbot de Educação Financeira",
@@ -30,8 +30,8 @@ const projects = [
     status: "Em desenvolvimento",
     featured: false,
     icon: MessageCircle,
-    liveUrl: "https://example.com/chatbot-financas",
-    sourceUrl: "https://github.com/seu-usuario/chatbot-financeiro"
+    //liveUrl: "https://example.com/chatbot-financas",
+    //sourceUrl: "https://github.com/seu-usuario/chatbot-financeiro"
   }
 ]
 
