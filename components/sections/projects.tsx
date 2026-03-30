@@ -16,13 +16,13 @@ const projects = [
     sourceUrl: "https://github.com/rvalves10/Quebra-Dica-Sorocaba"
   },
   {
-    title: "Sistema EcoFood",
-    description: "Plataforma para combater o desperdício de alimentos conectando mercados, padarias e restaurantes com pessoas ou instituições que possam aproveitar alimentos próximos da validade.",
-    status: "Em desenvolvimento",
-    featured: false,
-    icon: Leaf,
-    //liveUrl: "https://example.com/ecofood",
-    //sourceUrl: "https://github.com/seu-usuario/ecofood"
+    title: "Jessica Cilios - Portfólio",
+    description: "Plataforma para apresentação de projetos e habilidades de Jessica Cilios, uma profissional de tecnologia. O portfólio destaca suas experiências, projetos e competências técnicas.",
+    status: "Online",
+    featured: true,
+    icon: MapPin,
+    liveUrl: "https://v0-site-jessica-sobrancelhas.vercel.app/",
+    sourceUrl: "https://github.com/rvalves10/v0-site-jessica-sobrancelhas"
   },
   {
     title: "Chatbot de Educação Financeira",

@@ -43,15 +43,15 @@ const commands: Record<string, string | string[]> = {
     "",
     "1. QuebraDica Sorocaba",
     "   Portal colaborativo para moradores de Sorocaba",
-    "   Status: [▓▓▓▓▓▓░░░░] 60%",
+    "   Status: 100%",
     "",
-    "2. Sistema EcoFood",
-    "   Plataforma contra desperdicio de alimentos",
-    "   Status: [▓▓▓▓░░░░░░] 40%",
+    "2. Jessica Cilios - Portfólio",
+    "   Plataforma para apresentação de projetos e habilidades de Jessica Cilios, uma profissional de tecnologia. O portfólio destaca suas experiências, projetos e competências técnicas.",
+    "   Status: 100%",
     "",
     "3. Chatbot Educacao Financeira",
     "   IA para ensinar educacao financeira",
-    "   Status: [▓▓░░░░░░░░] 20%"
+    "   Status: 20%"
   ],
   contato: [
     ">> Formas de Contato:",
