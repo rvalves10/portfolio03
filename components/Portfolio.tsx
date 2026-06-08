@@ -272,6 +272,29 @@ export default function Portfolio() {
                 </div>
               </article>
             </div>
+            <div className="tilt reveal-cine" data-tilt="5" data-d="2">
+              <article className="proj feat">
+                <div className="proj-media">
+                  <div className="glow" />
+                  <div className="proj-mark">
+                    <span className="proj-mark-name">&lt;DevLingo/&gt;</span>
+                    <span className="proj-mark-tag" data-i18n="pj5.media">Python · IA · gamificação</span>
+                  </div>
+                </div>
+                <div className="proj-body">
+                  <div className="proj-top"><span className="proj-kicker" data-i18n="pj5.kick">◇ Projeto pessoal</span><div className="arrow">{arrowUR}</div></div>
+                  <h3>DevLingo</h3>
+                  <p data-i18n="pj5.p">Plataforma para aprender lógica de programação de forma gamificada — lições interativas, código Python rodando no navegador e um tutor com IA.</p>
+                  <div className="proj-foot">
+                    <span className="status-chip online"><span className="d" /><span data-i18n="proj.online">Online</span></span>
+                    <div className="proj-links">
+                      <a href="https://dev-lingo-gray.vercel.app" target="_blank" rel="noopener" data-i18n="proj.view">Ver projeto ↗</a>
+                      <a href="https://github.com/rvalves10/DevLingo" target="_blank" rel="noopener" data-i18n="proj.code">Código</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
             <div className="proj-sub">
               <div className="tilt reveal-cine" data-tilt="9" data-d="2">
                 <article className="proj mini">
