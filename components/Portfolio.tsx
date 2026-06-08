@@ -280,6 +280,7 @@ export default function Portfolio() {
                     <span className="proj-mark-name">&lt;DevLingo/&gt;</span>
                     <span className="proj-mark-tag" data-i18n="pj5.media">Python · IA · gamificação</span>
                   </div>
+                  <div className="proj-cover" style={{ backgroundImage: "url('/img/shot-c.png')" }} aria-hidden="true" />
                 </div>
                 <div className="proj-body">
                   <div className="proj-top"><span className="proj-kicker" data-i18n="pj5.kick">◇ Projeto pessoal</span><div className="arrow">{arrowUR}</div></div>

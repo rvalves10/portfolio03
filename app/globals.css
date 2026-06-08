@@ -287,6 +287,9 @@ html[data-theme='light'] .whoami { background: oklch(0.16 0.014 235); }
 .proj-mark { position:absolute; inset:0; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:24px; text-align:center; }
 .proj-mark-name { font-family:var(--font-mono); font-weight:700; font-size:clamp(26px,3.4vw,42px); letter-spacing:-0.02em; color:var(--ink); }
 .proj-mark-tag { font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+/* camada de capa: mostra /img/shot-c.png se existir; senão fica transparente e o .proj-mark aparece */
+.proj-cover { position:absolute; inset:0; z-index:2; background-size:cover; background-position:center; transition: transform .6s cubic-bezier(.16,.84,.3,1); }
+.proj:hover .proj-cover { transform: scale(1.04); }
 .proj-body { padding: clamp(26px, 3vw, 44px); display: flex; flex-direction: column; gap: 16px; }
 .proj-top { display:flex; align-items:center; justify-content:space-between; gap:16px; }
 .proj-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing:.16em; text-transform:uppercase; color: var(--accent); }
