@@ -8,3 +8,10 @@ node_modules/
 .next/
 .env*.local
 .DS_Store
+
+# Build artifacts
+*.tsbuildinfo
+
+# Local-only (not part of the app)
+.claude/
+_backup-redesign/
