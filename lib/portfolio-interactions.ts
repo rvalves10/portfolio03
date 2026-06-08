@@ -10,10 +10,27 @@ export function initPortfolio() {
   const root = document.documentElement;
   const saved = localStorage.getItem('rv-theme');
   if (saved) root.setAttribute('data-theme', saved);
-  function toggleTheme() {
+  function toggleTheme(e) {
     const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('rv-theme', next);
+    const apply = () => { root.setAttribute('data-theme', next); localStorage.setItem('rv-theme', next); };
+    // Fallback: sem View Transitions ou com reduced-motion -> troca instantânea
+    if (typeof document.startViewTransition !== 'function' || reduce) { apply(); return; }
+    // Origem do círculo: ponto do clique; senão o centro do botão de tema; senão canto sup. dir.
+    let x, y;
+    if (e && typeof e.clientX === 'number' && (e.clientX || e.clientY)) { x = e.clientX; y = e.clientY; }
+    else {
+      const btn = document.querySelector('[data-theme-toggle]');
+      if (btn) { const r = btn.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top + r.height / 2; }
+      else { x = innerWidth - 56; y = 44; }
+    }
+    const endR = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    const vt = document.startViewTransition(apply);
+    vt.ready.then(() => {
+      document.documentElement.animate(
+        { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${endR}px at ${x}px ${y}px)`] },
+        { duration: 520, easing: 'cubic-bezier(.16,.84,.3,1)', pseudoElement: '::view-transition-new(root)' }
+      );
+    });
   }
   document.querySelectorAll('[data-theme-toggle]').forEach(b => b.addEventListener('click', toggleTheme));
 
@@ -446,7 +463,7 @@ export function initPortfolio() {
       const c = (window.__dyn && window.__dyn().cmdk) || null;
       const sec = c ? c.sections : ['Sobre', 'Jornada', 'Skills', 'Projetos', 'Terminal', 'Certificados', 'Contato'];
       const kS = c ? c.kindSection : 'seção', kA = c ? c.kindAction : 'ação', kL = c ? c.kindLink : 'link';
-      const ids = ['#sobre', '#jornada', '#skills', '#projetos', '#github', '#terminal', '#certificados', '#contato'];
+      const ids = ['#sobre', '#jornada', '#skills', '#projetos', '#terminal', '#certificados', '#contato'];
       const arr = sec.map((label, i) => ({ label, kind: kS, ic: String(i + 1).padStart(2, '0'), run: () => go(ids[i]) }));
       arr.push({ label: c ? c.theme : 'Alternar tema claro / escuro', kind: kA, ic: '◐', run: () => toggleTheme() });
       arr.push({ label: c ? c.sound : 'Som da interface on / off', kind: kA, ic: '♪', run: () => { sound.set(!sound.on); document.querySelector('[data-sound-toggle]').dataset.on = sound.on; document.querySelector('.snd-on').style.display = sound.on ? 'block' : 'none'; document.querySelector('.snd-off').style.display = sound.on ? 'none' : 'block'; } });
