@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import { initPortfolio } from '@/lib/portfolio-interactions';
 import { initParticles } from '@/lib/particles';
 import { initI18n } from '@/lib/i18n';
+import { initGithub } from '@/lib/github';
 import { CERTIFICATES } from '@/data/certificates';
 
 const arrowUR = (
@@ -20,6 +21,7 @@ export default function Portfolio() {
     initI18n();
     initParticles();
     initPortfolio();
+    initGithub();
     // initial translate + langchange AFTER listeners are wired
     (window as any).__applyLang((window as any).__lang);
   }, []);
@@ -64,6 +66,7 @@ export default function Portfolio() {
             <a href="#jornada" data-i18n="nav.journey">Jornada</a>
             <a href="#skills" data-i18n="nav.skills">Skills</a>
             <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+            <a href="#github" data-i18n="nav.github">GitHub</a>
             <a href="#terminal" data-i18n="nav.terminal">Terminal</a>
             <a href="#certificados" data-i18n="nav.certs">Certificados</a>
             <a href="#contato" data-i18n="nav.contact">Contato</a>
@@ -92,6 +95,7 @@ export default function Portfolio() {
         <a href="#jornada" data-i18n="nav.journey">Jornada</a>
         <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="#github" data-i18n="nav.github">GitHub</a>
         <a href="#terminal" data-i18n="nav.terminal">Terminal</a>
         <a href="#certificados" data-i18n="nav.certs">Certificados</a>
         <a href="#contato" data-i18n="nav.contact">Contato</a>
@@ -298,12 +302,28 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* GITHUB */}
+      <section className="block" id="github">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <div>
+              <span className="eyebrow"><span className="idx">05</span> <span data-i18n="s8.eyebrow">Código aberto</span></span>
+              <h2 className="sec-title" data-i18n="s8.title" style={{ marginTop: 22 }}>Direto do <em>GitHub</em></h2>
+            </div>
+            <p data-i18n="s8.side" style={{ fontFamily: 'var(--font-mono)', fontSize: 13, color: 'var(--muted)', maxWidth: 250 }}>Repositórios e atividade reais, puxados ao vivo da API do GitHub.</p>
+          </div>
+          <div className="gh-stats reveal" id="gh-stats" />
+          <div className="gh-grid reveal" id="gh-repos" />
+          <div className="gh-cta"><a className="btn btn-ghost" href="https://github.com/rvalves10" target="_blank" rel="noopener" data-magnetic data-i18n="gh.profile">Ver perfil no GitHub ↗</a></div>
+        </div>
+      </section>
+
       {/* TERMINAL */}
       <section className="block" id="terminal">
         <div className="wrap">
           <div className="sec-head reveal">
             <div>
-              <span className="eyebrow"><span className="idx">05</span> <span data-i18n="s5.eyebrow">Terminal</span></span>
+              <span className="eyebrow"><span className="idx">06</span> <span data-i18n="s5.eyebrow">Terminal</span></span>
               <h2 className="sec-title" data-i18n="s5.title" style={{ marginTop: 22 }}>Me conheça via <em>shell</em></h2>
             </div>
             <p data-i18n="s5.side" style={{ fontFamily: 'var(--font-mono)', fontSize: 13, color: 'var(--muted)', maxWidth: 260 }}>Um terminal de verdade. Digite comandos e explore — começa com <b style={{ color: 'var(--accent)' }}>help</b>.</p>
@@ -326,7 +346,7 @@ export default function Portfolio() {
         <div className="wrap">
           <div className="sec-head reveal">
             <div>
-              <span className="eyebrow"><span className="idx">06</span> <span data-i18n="s6.eyebrow">Certificados</span></span>
+              <span className="eyebrow"><span className="idx">07</span> <span data-i18n="s6.eyebrow">Certificados</span></span>
               <h2 className="sec-title" data-i18n="s6.title" style={{ marginTop: 22 }}>Prova de <em>dedicação</em></h2>
             </div>
           </div>
@@ -351,7 +371,7 @@ export default function Portfolio() {
       <section className="contact" id="contato">
         <div className="wrap">
           <div className="reveal">
-            <span className="eyebrow"><span className="idx">07</span> <span data-i18n="s7.eyebrow">Contato</span></span>
+            <span className="eyebrow"><span className="idx">08</span> <span data-i18n="s7.eyebrow">Contato</span></span>
             <h2 className="contact-big" data-i18n="s7.title" style={{ marginTop: 26 }}>Vamos<br />construir <em>juntos?</em></h2>
           </div>
           <div className="contact-row">

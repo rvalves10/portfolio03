@@ -446,7 +446,7 @@ export function initPortfolio() {
       const c = (window.__dyn && window.__dyn().cmdk) || null;
       const sec = c ? c.sections : ['Sobre', 'Jornada', 'Skills', 'Projetos', 'Terminal', 'Certificados', 'Contato'];
       const kS = c ? c.kindSection : 'seção', kA = c ? c.kindAction : 'ação', kL = c ? c.kindLink : 'link';
-      const ids = ['#sobre', '#jornada', '#skills', '#projetos', '#terminal', '#certificados', '#contato'];
+      const ids = ['#sobre', '#jornada', '#skills', '#projetos', '#github', '#terminal', '#certificados', '#contato'];
       const arr = sec.map((label, i) => ({ label, kind: kS, ic: String(i + 1).padStart(2, '0'), run: () => go(ids[i]) }));
       arr.push({ label: c ? c.theme : 'Alternar tema claro / escuro', kind: kA, ic: '◐', run: () => toggleTheme() });
       arr.push({ label: c ? c.sound : 'Som da interface on / off', kind: kA, ic: '♪', run: () => { sound.set(!sound.on); document.querySelector('[data-sound-toggle]').dataset.on = sound.on; document.querySelector('.snd-on').style.display = sound.on ? 'block' : 'none'; document.querySelector('.snd-off').style.display = sound.on ? 'none' : 'block'; } });

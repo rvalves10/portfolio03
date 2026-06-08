@@ -41,6 +41,7 @@ export function initI18n() {
       'pj3.kick': '⚡ Em desenvolvimento', 'pj3.h': 'Chatbot de Educação Financeira', 'pj3.p': 'Chatbot com IA voltado para ensinar educação financeira de forma acessível para jovens e adultos.', 'pj3.status': 'Em desenvolvimento · 20%',
       'pj4.kick': '∞ Próximo', 'pj4.h': 'Seu projeto aqui', 'pj4.p': 'Sempre construindo. O próximo experimento em backend ou IA já está a caminho.', 'pj4.link': 'Ver GitHub ↗',
       'proj.view': 'Ver projeto ↗', 'proj.code': 'Código', 'proj.online': 'Online',
+      'nav.github': 'GitHub', 's8.eyebrow': 'Código aberto', 's8.title': 'Direto do <em>GitHub</em>', 's8.side': 'Repositórios e atividade reais, puxados ao vivo da API do GitHub.', 'gh.repos': 'repositórios', 'gh.langs': 'linguagens', 'gh.since': 'no GitHub desde', 'gh.stars': 'estrelas', 'gh.loading': 'carregando repositórios…', 'gh.error': 'não deu pra carregar agora —', 'gh.profile': 'Ver perfil no GitHub ↗',
       's5.eyebrow': 'Terminal', 's5.title': 'Me conheça via <em>shell</em>', 's5.side': 'Um terminal de verdade. Digite comandos e explore — começa com <b style="color:var(--accent);">help</b>.',
       'term.w1': 'Bem-vindo ao terminal de Richard Victor · v2.0', 'term.w2': "Digite 'help' para ver os comandos disponíveis.",
       'term.hint': 'experimente: <b>sobre</b> · <b>skills</b> · <b>projetos</b> · <b>secret</b>',
@@ -85,6 +86,7 @@ export function initI18n() {
       'pj3.kick': '⚡ In development', 'pj3.h': 'Financial Education Chatbot', 'pj3.p': 'An AI chatbot built to teach financial education in an accessible way for young people and adults.', 'pj3.status': 'In development · 20%',
       'pj4.kick': '∞ Next', 'pj4.h': 'Your project here', 'pj4.p': 'Always building. The next experiment in backend or AI is already on the way.', 'pj4.link': 'View GitHub ↗',
       'proj.view': 'View project ↗', 'proj.code': 'Code', 'proj.online': 'Online',
+      'nav.github': 'GitHub', 's8.eyebrow': 'Open source', 's8.title': 'Straight from <em>GitHub</em>', 's8.side': 'Real repositories and activity, pulled live from the GitHub API.', 'gh.repos': 'repositories', 'gh.langs': 'languages', 'gh.since': 'on GitHub since', 'gh.stars': 'stars', 'gh.loading': 'loading repositories…', 'gh.error': "couldn't load right now —", 'gh.profile': 'View GitHub profile ↗',
       's5.eyebrow': 'Terminal', 's5.title': 'Get to know me via <em>shell</em>', 's5.side': 'A real terminal. Type commands and explore — start with <b style="color:var(--accent);">help</b>.',
       'term.w1': "Welcome to Richard Victor's terminal · v2.0", 'term.w2': "Type 'help' to see the available commands.",
       'term.hint': 'try: <b>about</b> · <b>skills</b> · <b>projects</b> · <b>secret</b>',
@@ -122,7 +124,7 @@ export function initI18n() {
         { t: '[<ok>  ok  </ok>] deploy: <ok>no ar</ok>', d: 360 },
         { t: '<dim>></dim> bem-vindo. sou o Richard.', d: 520 }
       ],
-      cmdk: { sections: ['Sobre', 'Jornada', 'Skills', 'Projetos', 'Terminal', 'Certificados', 'Contato'], theme: 'Alternar tema claro / escuro', sound: 'Som da interface on / off', github: 'Abrir GitHub', linkedin: 'Abrir LinkedIn', email: 'Enviar e-mail', kindSection: 'seção', kindAction: 'ação', kindLink: 'link', empty: 'nada encontrado' }
+      cmdk: { sections: ['Sobre', 'Jornada', 'Skills', 'Projetos', 'GitHub', 'Terminal', 'Certificados', 'Contato'], theme: 'Alternar tema claro / escuro', sound: 'Som da interface on / off', github: 'Abrir GitHub', linkedin: 'Abrir LinkedIn', email: 'Enviar e-mail', kindSection: 'seção', kindAction: 'ação', kindLink: 'link', empty: 'nada encontrado' }
     },
     en: {
       tw: ['clean code', 'efficient APIs', 'backend systems', 'AI models'],
@@ -148,7 +150,7 @@ export function initI18n() {
         { t: '[<ok>  ok  </ok>] deploy: <ok>live</ok>', d: 360 },
         { t: "<dim>></dim> welcome. I'm Richard.", d: 520 }
       ],
-      cmdk: { sections: ['About', 'Journey', 'Skills', 'Projects', 'Terminal', 'Certificates', 'Contact'], theme: 'Toggle light / dark theme', sound: 'Interface sound on / off', github: 'Open GitHub', linkedin: 'Open LinkedIn', email: 'Send email', kindSection: 'section', kindAction: 'action', kindLink: 'link', empty: 'nothing found' }
+      cmdk: { sections: ['About', 'Journey', 'Skills', 'Projects', 'GitHub', 'Terminal', 'Certificates', 'Contact'], theme: 'Toggle light / dark theme', sound: 'Interface sound on / off', github: 'Open GitHub', linkedin: 'Open LinkedIn', email: 'Send email', kindSection: 'section', kindAction: 'action', kindLink: 'link', empty: 'nothing found' }
     }
   };
 
