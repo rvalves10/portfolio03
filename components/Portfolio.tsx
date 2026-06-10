@@ -5,6 +5,7 @@ import { initPortfolio } from '@/lib/portfolio-interactions';
 import { initParticles } from '@/lib/particles';
 import { initI18n } from '@/lib/i18n';
 import { CERTIFICATES } from '@/data/certificates';
+import { PROJECTS } from '@/data/projects';
 
 const arrowUR = (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M9 7h8v8" /></svg>
@@ -17,6 +18,7 @@ export default function Portfolio() {
     if (started.current) return; // guard against StrictMode double-invoke
     started.current = true;
     (window as any).__CERTS = CERTIFICATES;
+    (window as any).__PROJECTS = PROJECTS;
     initI18n();
     initParticles();
     initPortfolio();

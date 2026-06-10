@@ -201,6 +201,21 @@ export function initPortfolio() {
       if (c === 'github') { window.open('https://github.com/rvalves10', '_blank'); print(t.opening('GitHub')); return; }
       if (c === 'linkedin') { window.open('https://www.linkedin.com/in/richard-victor-3611a5303/', '_blank'); print(t.opening('LinkedIn')); return; }
       const key = alias[c];
+      if (key === 'projects') {
+        const lang = window.__lang || 'pt';
+        const list = window.__PROJECTS || [];
+        const stl = (s) => lang === 'en'
+          ? (s === 'online' ? '[online]' : s === 'dev' ? '[in dev]' : '[next]')
+          : (s === 'online' ? '[online]' : s === 'dev' ? '[em dev]' : '[próximo]');
+        print(lang === 'en' ? '>> projects:' : '>> projetos:');
+        print('');
+        list.forEach((p, i) => {
+          print((i + 1) + '. ' + p.name + '  ' + stl(p.status));
+          print('   ' + (lang === 'en' ? p.en : p.pt));
+        });
+        print('');
+        return;
+      }
       const out = key && t[key];
       if (out) out.forEach(l => print(l)); else print(t.notfound(c), 'err');
       print('');
@@ -427,7 +442,7 @@ export function initPortfolio() {
     function finish() { el.classList.add('done'); el.style.opacity = '0'; setTimeout(() => { el.style.visibility = 'hidden'; el.style.display = 'none'; }, 720); }
     if (seen || reduce) { finish(); return; }
     document.body.style.overflow = 'hidden';
-    const lines = (window.__dyn && window.__dyn().boot) || [
+    const rawLines = (window.__dyn && window.__dyn().boot) || [
       { t: '$ booting richard.dev …', d: 360 },
       { t: '[<ok>  ok  </ok>] kernel: python runtime', d: 260 },
       { t: '[<ok>  ok  </ok>] modules: backend · apis · git', d: 260 },
@@ -437,6 +452,8 @@ export function initPortfolio() {
       { t: '[<ok>  ok  </ok>] deploy: <ok>live</ok>', d: 360 },
       { t: '<dim>></dim> welcome. sou o Richard.', d: 520 }
     ];
+    const projCount = (window.__PROJECTS && window.__PROJECTS.length) || 3;
+    const lines = rawLines.map(l => ({ ...l, t: l.t.replace(/(\/proj(?:etos|ects) )\(\d+\)/, '$1(' + projCount + ')') }));
     let html = '', i = 0;
     function render(extra) { log.innerHTML = (html + (extra || '')).replace(/<ok>/g, '<span class="ok">').replace(/<\/ok>/g, '</span>').replace(/<dim>/g, '<span class="dim">').replace(/<\/dim>/g, '</span>') + '<span class="cur"></span>'; }
     function next() {
