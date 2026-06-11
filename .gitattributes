@@ -1,0 +1,9 @@
+# Binários — nunca converter fim de linha
+*.pdf  -text
+*.png  -text
+*.jpg  -text
+*.jpeg -text
+*.webp -text
+*.ico  -text
+*.woff -text
+*.woff2 -text
