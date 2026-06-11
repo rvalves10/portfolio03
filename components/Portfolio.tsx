@@ -242,7 +242,17 @@ export default function Portfolio() {
           <div className="proj-list">
             <div className="tilt reveal-cine" data-tilt="5">
               <article className="proj feat">
-                <div className="proj-media"><div className="glow" /><img className="proj-shot" src="/img/shot-a.png" alt="QuebraDica Sorocaba" loading="lazy" decoding="async" /></div>
+                <div className="proj-media">
+                  <div className="glow" />
+                  <div className="proj-art">
+                    <svg className="pa-ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true">
+                      <path d="M32 56c10-11.5 17-19.6 17-28a17 17 0 1 0-34 0c0 8.4 7 16.5 17 28Z" />
+                      <circle cx="32" cy="27" r="6.5" />
+                    </svg>
+                    <span className="pa-name">QUEBRA<b>DICA</b></span>
+                    <span className="pa-tag" data-i18n="pj1.media">dicas da comunidade · Sorocaba</span>
+                  </div>
+                </div>
                 <div className="proj-body">
                   <div className="proj-top"><span className="proj-kicker" data-i18n="pj1.kick">★ Projeto principal</span><div className="arrow">{arrowUR}</div></div>
                   <h3>QuebraDica Sorocaba</h3>
@@ -259,7 +269,17 @@ export default function Portfolio() {
             </div>
             <div className="tilt reveal-cine" data-tilt="5" data-d="1">
               <article className="proj feat">
-                <div className="proj-media"><div className="glow" /><img className="proj-shot" src="/img/shot-b.png" alt="Jéssica Cílios" loading="lazy" decoding="async" style={{ objectPosition: 'center' }} /></div>
+                <div className="proj-media">
+                  <div className="glow" />
+                  <div className="proj-art jc">
+                    <svg className="pa-ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
+                      <path d="M8 38c7-10.5 16.5-16 24-16s17 5.5 24 16" />
+                      <path d="M13 35.5l-4.5-5.5M21.5 30.5l-3.5-6.5M32 28v-7.5M42.5 30.5l3.5-6.5M51 35.5l4.5-5.5" />
+                    </svg>
+                    <span className="pa-name serif">Jéssica Cílios</span>
+                    <span className="pa-tag" data-i18n="pj2.media">estética · cílios &amp; sobrancelhas</span>
+                  </div>
+                </div>
                 <div className="proj-body">
                   <div className="proj-top"><span className="proj-kicker" data-i18n="pj2.kick">◆ Trabalho freelance</span><div className="arrow">{arrowUR}</div></div>
                   <h3 data-i18n="pj2.h">Jéssica Cílios — Portfólio</h3>
@@ -385,6 +405,7 @@ export default function Portfolio() {
               <a className="clink" href="mailto:richardvic12@gmail.com"><span><span className="l" data-i18n="contact.email_l">E-mail</span><br /><span className="v">richardvic12@gmail.com</span></span><span className="ar">↗</span></a>
               <a className="clink" href="https://github.com/rvalves10" target="_blank" rel="noopener"><span><span className="l">GitHub</span><br /><span className="v">github.com/rvalves10</span></span><span className="ar">↗</span></a>
               <a className="clink" href="https://www.linkedin.com/in/richard-victor-3611a5303/" target="_blank" rel="noopener"><span><span className="l">LinkedIn</span><br /><span className="v">/in/richard-victor</span></span><span className="ar">↗</span></a>
+              <a className="clink" href="/cv-richard-victor.pdf" target="_blank" rel="noopener"><span><span className="l" data-i18n="contact.cv_l">Currículo</span><br /><span className="v" data-i18n="contact.cv_v">Baixar PDF</span></span><span className="ar">↓</span></a>
             </div>
             <a href="mailto:richardvic12@gmail.com" className="btn btn-primary reveal" data-d="2" data-magnetic data-i18n="contact.send" style={{ fontSize: 14, padding: '20px 32px' }}>Enviar e-mail ✉</a>
           </div>

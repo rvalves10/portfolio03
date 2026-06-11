@@ -41,6 +41,7 @@ export function initI18n() {
       'pj3.kick': '⚡ Em desenvolvimento', 'pj3.h': 'Chatbot de Educação Financeira', 'pj3.p': 'Chatbot com IA voltado para ensinar educação financeira de forma acessível para jovens e adultos.', 'pj3.status': 'Em desenvolvimento · 20%',
       'pj4.kick': '∞ Próximo', 'pj4.h': 'Seu projeto aqui', 'pj4.p': 'Sempre construindo. O próximo experimento em backend ou IA já está a caminho.', 'pj4.link': 'Ver GitHub ↗',
       'pj5.kick': '◇ Projeto pessoal', 'pj5.p': 'Plataforma para aprender lógica de programação de forma gamificada — lições interativas, código Python rodando no navegador e um tutor com IA.', 'pj5.media': 'Python · IA · gamificação',
+      'pj1.media': 'dicas da comunidade · Sorocaba', 'pj2.media': 'estética · cílios & sobrancelhas',
       'proj.view': 'Ver projeto ↗', 'proj.code': 'Código', 'proj.online': 'Online',
       's5.eyebrow': 'Terminal', 's5.title': 'Me conheça via <em>shell</em>', 's5.side': 'Um terminal de verdade. Digite comandos e explore — começa com <b style="color:var(--accent);">help</b>.',
       'term.w1': 'Bem-vindo ao terminal de Richard Victor · v2.0', 'term.w2': "Digite 'help' para ver os comandos disponíveis.",
@@ -48,7 +49,7 @@ export function initI18n() {
       's6.eyebrow': 'Certificados', 's6.title': 'Prova de <em>dedicação</em>', 'cert.meta': 'certificações e cursos concluídos durante minha jornada de aprendizado contínuo em tecnologia.',
       'cert.all': 'Todos', 'cert.prog': 'Programação', 'cert.data': 'Dados & IA', 'cert.soft': 'Soft Skills', 'cert.other': 'Outros',
       'cert.repo': 'Todos os certificados estão no <a href="https://github.com/rvalves10/certificados" target="_blank" rel="noopener">repositório do GitHub ↗</a>',
-      's7.eyebrow': 'Contato', 's7.title': 'Vamos<br/>construir <em>juntos?</em>', 'contact.send': 'Enviar e-mail ✉', 'contact.email_l': 'E-mail',
+      's7.eyebrow': 'Contato', 's7.title': 'Vamos<br/>construir <em>juntos?</em>', 'contact.send': 'Enviar e-mail ✉', 'contact.email_l': 'E-mail', 'contact.cv_l': 'Currículo', 'contact.cv_v': 'Baixar PDF',
       'footer.copy': '© <span id="year">2026</span> <b>Richard Victor</b> · feito com Python no coração 🐍', 'footer.top': 'voltar ao topo',
       'boot.skip': '[ esc ] pular', 'cmdk.ph': 'buscar seção, ação, link…', 'cmdk.nav': 'navegar', 'cmdk.open': 'abrir'
     },
@@ -86,6 +87,7 @@ export function initI18n() {
       'pj3.kick': '⚡ In development', 'pj3.h': 'Financial Education Chatbot', 'pj3.p': 'An AI chatbot built to teach financial education in an accessible way for young people and adults.', 'pj3.status': 'In development · 20%',
       'pj4.kick': '∞ Next', 'pj4.h': 'Your project here', 'pj4.p': 'Always building. The next experiment in backend or AI is already on the way.', 'pj4.link': 'View GitHub ↗',
       'pj5.kick': '◇ Personal project', 'pj5.p': 'A platform to learn programming logic through gamification — interactive lessons, Python running in the browser and an AI tutor.', 'pj5.media': 'Python · AI · gamification',
+      'pj1.media': 'community tips · Sorocaba', 'pj2.media': 'beauty · lashes & brows',
       'proj.view': 'View project ↗', 'proj.code': 'Code', 'proj.online': 'Online',
       's5.eyebrow': 'Terminal', 's5.title': 'Get to know me via <em>shell</em>', 's5.side': 'A real terminal. Type commands and explore — start with <b style="color:var(--accent);">help</b>.',
       'term.w1': "Welcome to Richard Victor's terminal · v2.0", 'term.w2': "Type 'help' to see the available commands.",
@@ -93,7 +95,7 @@ export function initI18n() {
       's6.eyebrow': 'Certificates', 's6.title': 'Proof of <em>dedication</em>', 'cert.meta': 'certifications and courses completed throughout my journey of continuous learning in technology.',
       'cert.all': 'All', 'cert.prog': 'Programming', 'cert.data': 'Data & AI', 'cert.soft': 'Soft Skills', 'cert.other': 'Other',
       'cert.repo': 'All certificates are in the <a href="https://github.com/rvalves10/certificados" target="_blank" rel="noopener">GitHub repository ↗</a>',
-      's7.eyebrow': 'Contact', 's7.title': "Let's<br/>build <em>together?</em>", 'contact.send': 'Send email ✉', 'contact.email_l': 'Email',
+      's7.eyebrow': 'Contact', 's7.title': "Let's<br/>build <em>together?</em>", 'contact.send': 'Send email ✉', 'contact.email_l': 'Email', 'contact.cv_l': 'Resume', 'contact.cv_v': 'Download PDF',
       'footer.copy': '© <span id="year">2026</span> <b>Richard Victor</b> · made with Python at heart 🐍', 'footer.top': 'back to top',
       'boot.skip': '[ esc ] skip', 'cmdk.ph': 'search section, action, link…', 'cmdk.nav': 'navigate', 'cmdk.open': 'open'
     }
@@ -106,7 +108,7 @@ export function initI18n() {
       who: [['nome', 'Richard Victor', 'str'], ['papel', 'Backend Developer', 'str'], ['local', 'Sorocaba, BR', 'str'], ['foco', ['Python', 'APIs', 'IA'], 'arr'], ['estudando', 'FastAPI', 'str'], ['objetivo', 'Engenheiro de IA', 'str'], ['café', true, 'bool']],
       cert: { cat: { programming: 'Programação', data: 'Dados & IA', 'soft-skills': 'Soft Skills', other: 'Outros' }, cred: 'Ver credencial', moreAll: '+ Ver todos', moreN: n => `+ Ver todos (${n} mais)`, less: '— Ver menos' },
       term: {
-        help: ['Comandos disponíveis:', '  sobre       informações pessoais', '  skills      stack técnica', '  projetos    projetos em destaque', '  contato     formas de contato', '  github      abrir GitHub', '  linkedin    abrir LinkedIn', '  clear       limpar terminal', '  secret      ???'],
+        help: ['Comandos disponíveis:', '  sobre       informações pessoais', '  skills      stack técnica', '  projetos    projetos em destaque', '  contato     formas de contato', '  cv          baixar currículo', '  github      abrir GitHub', '  linkedin    abrir LinkedIn', '  clear       limpar terminal', '  secret      ???'],
         about: ['┌─────────────────────────────────────┐', '│  Richard Victor — Backend Developer │', '├─────────────────────────────────────┤', '│  local:  Sorocaba, SP · Brasil      │', '│  curso:  Análise e Dev. de Sistemas │', '│  foco:   Python · APIs · IA         │', '└─────────────────────────────────────┘'],
         skills: ['>> stack:', '   python      [████████████] avançando', '   fastapi     [█████████░░░] praticando', '   postgresql  [████████░░░░] estudando', '   docker      [██████░░░░░░] iniciando', '   git         [██████████░░] confortável', '   ml/ia       [█████░░░░░░░] explorando'],
         projects: ['>> projetos:', '', '1. QuebraDica Sorocaba   [online]', '   portal colaborativo da comunidade', '2. Jéssica Cílios        [online]', '   portfólio profissional', '3. Chatbot Edu. Financeira [20%]', '   IA para educação financeira'],
@@ -124,7 +126,7 @@ export function initI18n() {
         { t: '[<ok>  ok  </ok>] deploy: <ok>no ar</ok>', d: 360 },
         { t: '<dim>></dim> bem-vindo. sou o Richard.', d: 520 }
       ],
-      cmdk: { sections: ['Sobre', 'Jornada', 'Skills', 'Projetos', 'Terminal', 'Certificados', 'Contato'], theme: 'Alternar tema claro / escuro', sound: 'Som da interface on / off', github: 'Abrir GitHub', linkedin: 'Abrir LinkedIn', email: 'Enviar e-mail', kindSection: 'seção', kindAction: 'ação', kindLink: 'link', empty: 'nada encontrado' }
+      cmdk: { sections: ['Sobre', 'Jornada', 'Skills', 'Projetos', 'Terminal', 'Certificados', 'Contato'], theme: 'Alternar tema claro / escuro', sound: 'Som da interface on / off', github: 'Abrir GitHub', linkedin: 'Abrir LinkedIn', email: 'Enviar e-mail', cv: 'Baixar currículo (PDF)', kindSection: 'seção', kindAction: 'ação', kindLink: 'link', empty: 'nada encontrado' }
     },
     en: {
       tw: ['clean code', 'efficient APIs', 'backend systems', 'AI models'],
@@ -132,7 +134,7 @@ export function initI18n() {
       who: [['name', 'Richard Victor', 'str'], ['role', 'Backend Developer', 'str'], ['location', 'Sorocaba, BR', 'str'], ['focus', ['Python', 'APIs', 'AI'], 'arr'], ['learning', 'FastAPI', 'str'], ['goal', 'AI Engineer', 'str'], ['coffee', true, 'bool']],
       cert: { cat: { programming: 'Programming', data: 'Data & AI', 'soft-skills': 'Soft Skills', other: 'Other' }, cred: 'View credential', moreAll: '+ View all', moreN: n => `+ View all (${n} more)`, less: '— View less' },
       term: {
-        help: ['Available commands:', '  about       personal info', '  skills      tech stack', '  projects    featured projects', '  contact     ways to reach me', '  github      open GitHub', '  linkedin    open LinkedIn', '  clear       clear terminal', '  secret      ???'],
+        help: ['Available commands:', '  about       personal info', '  skills      tech stack', '  projects    featured projects', '  contact     ways to reach me', '  cv          download resume', '  github      open GitHub', '  linkedin    open LinkedIn', '  clear       clear terminal', '  secret      ???'],
         about: ['┌─────────────────────────────────────┐', '│  Richard Victor — Backend Developer │', '├─────────────────────────────────────┤', '│  location:  Sorocaba, SP · Brazil   │', '│  studying:  Systems Analysis & Dev. │', '│  focus:     Python · APIs · AI      │', '└─────────────────────────────────────┘'],
         skills: ['>> stack:', '   python      [████████████] advancing', '   fastapi     [█████████░░░] practicing', '   postgresql  [████████░░░░] studying', '   docker      [██████░░░░░░] starting', '   git         [██████████░░] comfortable', '   ml/ai       [█████░░░░░░░] exploring'],
         projects: ['>> projects:', '', '1. QuebraDica Sorocaba   [online]', '   collaborative community portal', '2. Jéssica Cílios        [online]', '   professional portfolio', '3. Financial Edu. Chatbot  [20%]', '   AI for financial education'],
@@ -150,7 +152,7 @@ export function initI18n() {
         { t: '[<ok>  ok  </ok>] deploy: <ok>live</ok>', d: 360 },
         { t: "<dim>></dim> welcome. I'm Richard.", d: 520 }
       ],
-      cmdk: { sections: ['About', 'Journey', 'Skills', 'Projects', 'Terminal', 'Certificates', 'Contact'], theme: 'Toggle light / dark theme', sound: 'Interface sound on / off', github: 'Open GitHub', linkedin: 'Open LinkedIn', email: 'Send email', kindSection: 'section', kindAction: 'action', kindLink: 'link', empty: 'nothing found' }
+      cmdk: { sections: ['About', 'Journey', 'Skills', 'Projects', 'Terminal', 'Certificates', 'Contact'], theme: 'Toggle light / dark theme', sound: 'Interface sound on / off', github: 'Open GitHub', linkedin: 'Open LinkedIn', email: 'Send email', cv: 'Download resume (PDF)', kindSection: 'section', kindAction: 'action', kindLink: 'link', empty: 'nothing found' }
     }
   };
 

@@ -200,6 +200,7 @@ export function initPortfolio() {
       if (c === 'clear') { termBody.querySelectorAll('.term-line:not(.boot)').forEach(n => { if (!n.classList.contains('keep')) n.remove(); }); return; }
       if (c === 'github') { window.open('https://github.com/rvalves10', '_blank'); print(t.opening('GitHub')); return; }
       if (c === 'linkedin') { window.open('https://www.linkedin.com/in/richard-victor-3611a5303/', '_blank'); print(t.opening('LinkedIn')); return; }
+      if (c === 'cv' || c === 'curriculo' || c === 'currículo' || c === 'resume') { window.open('/cv-richard-victor.pdf', '_blank'); print(t.opening('CV')); return; }
       const key = alias[c];
       if (key === 'projects') {
         const lang = window.__lang || 'pt';
@@ -240,6 +241,42 @@ export function initPortfolio() {
   const bar = document.querySelector('.scroll-bar');
   function progress() { const h = document.documentElement.scrollHeight - innerHeight; bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%'; }
   progress(); addEventListener('scroll', progress, { passive: true });
+
+  /* ---------- Smooth wheel scroll (lerp) ---------- */
+  if (!reduce && !isCoarse) {
+    let target = scrollY, current = scrollY, raf = null;
+    const maxScroll = () => document.documentElement.scrollHeight - innerHeight;
+    const insideScrollable = (el) => {
+      while (el && el !== document.body && el !== document.documentElement) {
+        if (el.scrollHeight > el.clientHeight + 1) {
+          const ov = getComputedStyle(el).overflowY;
+          if (ov === 'auto' || ov === 'scroll') return true;
+        }
+        el = el.parentElement;
+      }
+      return false;
+    };
+    function glide() {
+      raf = requestAnimationFrame(() => {
+        current += (target - current) * 0.105;
+        if (Math.abs(target - current) < 0.6) { current = target; window.scrollTo({ top: current, behavior: 'instant' }); raf = null; return; }
+        window.scrollTo({ top: current, behavior: 'instant' });
+        glide();
+      });
+    }
+    addEventListener('wheel', (e) => {
+      if (e.ctrlKey || e.defaultPrevented) return;            // zoom do browser
+      if (insideScrollable(e.target)) return;                 // terminal, cmdk-list, drawer…
+      if (document.querySelector('.cmdk.open, .drawer.open')) { e.preventDefault(); return; } // trava o fundo
+      e.preventDefault();
+      const dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+      if (!raf) { current = scrollY; target = scrollY; }
+      target = Math.max(0, Math.min(maxScroll(), target + dy));
+      if (!raf) glide();
+    }, { passive: false });
+    // âncoras / teclado: re-sincroniza quando o lerp não está ativo
+    addEventListener('scroll', () => { if (!raf) { current = scrollY; target = scrollY; } }, { passive: true });
+  }
 
   /* ---------- Parallax (rAF, only when near viewport) ---------- */
   if (!reduce) {
@@ -487,6 +524,7 @@ export function initPortfolio() {
       arr.push({ label: c ? c.github : 'Abrir GitHub', kind: kL, ic: '↗', run: () => open('https://github.com/rvalves10', '_blank') });
       arr.push({ label: c ? c.linkedin : 'Abrir LinkedIn', kind: kL, ic: '↗', run: () => open('https://www.linkedin.com/in/richard-victor-3611a5303/', '_blank') });
       arr.push({ label: c ? c.email : 'Enviar e-mail', kind: kL, ic: '✉', run: () => location.href = 'mailto:richardvic12@gmail.com' });
+      arr.push({ label: (c && c.cv) || 'Baixar currículo (PDF)', kind: kL, ic: '↓', run: () => open('/cv-richard-victor.pdf', '_blank') });
       return arr;
     }
     let items = buildItems();
