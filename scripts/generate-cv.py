@@ -84,7 +84,7 @@ c.drawString(40, H - 62, 'Desenvolvedor Backend (Jr.)  ·  Estudante de ADS  · 
 c.setFont('Helvetica', 8.6); c.setFillColor(HexColor('#c9d2d8'))
 c.drawString(40, H - 82, 'Sorocaba – SP   ·   (15) 99830-6390   ·   richardvic12@gmail.com   ·   CNH AB')
 c.setFillColor(HexColor('#9fb3ad'))
-c.drawString(40, H - 96, 'github.com/rvalves10   ·   linkedin.com/in/richard-victor-3611a5303   ·   v0-richarddev.vercel.app')
+c.drawString(40, H - 96, 'github.com/rvalves10   ·   linkedin.com/in/richard-victor-3611a5303   ·   richardvictor.dev')
 
 # ---------------- COLUNAS ----------------
 LX, LW = 40, 330          # esquerda
@@ -196,7 +196,7 @@ for s in ['Liderança e treinamento de equipe', 'Comunicação verbal e escrita'
 
 # rodapé
 c.setFont('Helvetica', 7); c.setFillColor(FAINT)
-c.drawCentredString(W / 2, 24, 'Portfólio: v0-richarddev.vercel.app   ·   Atualizado em junho/2026')
+c.drawCentredString(W / 2, 24, 'Portfólio: richardvictor.dev   ·   Atualizado em junho/2026')
 
 c.save()
 print('OK ->', os.path.abspath(OUT))
