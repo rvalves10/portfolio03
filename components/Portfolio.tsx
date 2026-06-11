@@ -298,11 +298,14 @@ export default function Portfolio() {
               <article className="proj feat">
                 <div className="proj-media">
                   <div className="glow" />
-                  <div className="proj-mark">
-                    <span className="proj-mark-name">&lt;DevLingo/&gt;</span>
-                    <span className="proj-mark-tag" data-i18n="pj5.media">Python · IA · gamificação</span>
+                  <div className="proj-art">
+                    <svg className="pa-ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true">
+                      <rect x="8" y="8" width="48" height="48" rx="13" />
+                      <path d="M20 24l8 8-8 8M35 40h11" />
+                    </svg>
+                    <span className="pa-name">Dev<b>Lingo</b></span>
+                    <span className="pa-tag" data-i18n="pj5.media">Python · IA · gamificação</span>
                   </div>
-                  <div className="proj-cover" style={{ backgroundImage: "url('/img/shot-c.png')" }} aria-hidden="true" />
                 </div>
                 <div className="proj-body">
                   <div className="proj-top"><span className="proj-kicker" data-i18n="pj5.kick">◇ Projeto pessoal</span><div className="arrow">{arrowUR}</div></div>

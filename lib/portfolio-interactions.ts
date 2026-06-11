@@ -333,15 +333,25 @@ export function initPortfolio() {
     ob.observe(el);
   });
 
-  /* ---------- Marquee reacts to scroll velocity ---------- */
+  /* ---------- Marquee (rAF-driven; reage ao scroll sem saltos) ---------- */
   if (!reduce) {
     const track = document.querySelector('.marquee-track');
     if (track) {
-      let last = scrollY, boost = 0;
-      addEventListener('scroll', () => { const v = Math.abs(scrollY - last); last = scrollY; boost = Math.min(v * 0.04, 5); }, { passive: true });
+      track.style.animation = 'none'; // assume o controle da posição via transform
+      let x = 0, half = 0, last = scrollY, boost = 0, paused = false;
+      const measure = () => { half = track.scrollWidth / 2; };
+      measure(); addEventListener('resize', measure);
+      addEventListener('scroll', () => { const v = Math.abs(scrollY - last); last = scrollY; boost = Math.min(boost + v * 0.06, 7); }, { passive: true });
+      const wrap_ = track.parentElement;
+      wrap_.addEventListener('mouseenter', () => { paused = true; });
+      wrap_.addEventListener('mouseleave', () => { paused = false; });
       (function mloop() {
-        if (boost > 0.01) { const cur = parseFloat(getComputedStyle(track).animationDuration) || 26; track.style.animationDuration = Math.max(8, 26 - boost * 4) + 's'; boost *= 0.9; }
-        else { track.style.animationDuration = '26s'; }
+        if (!paused && half > 0) {
+          x -= 0.75 + boost;
+          if (x <= -half) x += half;
+          track.style.transform = `translateX(${x.toFixed(1)}px)`;
+        }
+        boost *= 0.94;
         requestAnimationFrame(mloop);
       })();
     }
